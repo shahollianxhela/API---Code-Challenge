@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <ul id="catList"></ul>
+
+    <script>
+        // Kori per te marre dhe shfaqur te dhenat nga API
+        const catList = document.getElementById('catList');
+
+        // Merrja e te dhenave nga API dhe shfaqja ne liste
+        fetch('https://catfact.ninja/facts')
+            .then(response => response.json())
+            .then(data => {
+                const facts = data.data;
+                facts.forEach(fact => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        <h3>${fact.fact}</h3>
+                        <p>Gjatësia: ${fact.length}</p>
+                    `;
+                    catList.appendChild(listItem);
+                });
+            });
+
+        // EventListener per listen
+        catList.addEventListener('click', function(event) {
+            if (event.target.tagName === 'LI') {
+                redirectToDetail(event);
+            }
+        });
+    </script>
+</body>
+</html>
