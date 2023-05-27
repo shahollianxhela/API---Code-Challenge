@@ -1,0 +1,57 @@
+/* Stilimi per listen */
+#catList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #catList li {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+  }
+  
+  #catList li:hover {
+    background-color: #ddd;
+  }
+  
+  #catList li h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  #catList li p {
+    margin: 0;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  /* Stilimi per faqen e detail */
+  #factTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #factLength {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #d32f2f;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
